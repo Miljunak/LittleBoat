@@ -1,0 +1,68 @@
+<div class="centered">
+
+    <div class="card">  
+        <a class ="back" routerLink="/trip-list">Powrot ⮐</a>
+        <h1>{{currTrip.name}}</h1>
+
+        <div class="middle">
+
+            <div class="left">
+                <h2>{{currTrip.country}}</h2>
+                <p class="opis">{{currTrip.desc}}</p>
+            </div>
+
+            <div class="right"><img src="{{ currTrip.imageLink }}" alt="{{ currTrip.name }}"/></div>
+        </div>
+
+        <div class="bottom">
+          <div class="addrem">
+            <p class="daty">
+              Od {{currTrip.startDate}} <br> Do {{currTrip.endDate}}
+            </p>
+            
+          </div>
+          <p class="cena">{{currTrip.price}} $</p>
+          <div class="addrem">
+            <p class="ilosc">Dostepne: {{currTrip.maxAmount - currTrip.amount}}</p>
+            <p class="ilosc">Wybrano: {{currTrip.amount}}</p>
+            <p *ngIf="currTrip.amount == currTrip.maxAmount" style="font-size:18px; margin: 5px;"> Brak <br> miejsc. </p>
+            <button *ngIf="currTrip.amount < currTrip.maxAmount" (click)="addTrip(currTrip)"> + </button>
+            <button style = "background-color: rgb(241, 48, 48); padding: 8px 18px; margin-right: 5px;" *ngIf="currTrip.amount > 0" (click)="removeTrip(currTrip)"> - </button>
+          </div>
+          <div class="likes-section" *ngIf="!(auth.userRoles.manager || auth.userRoles.banned) || auth.userRoles.admin">
+              <app-trip-rating (ratingChanged)="ratingEventHandler(currTrip, $event)" [likes]="currTrip.likes"
+              [dislikes]="currTrip.dislikes"></app-trip-rating>
+          </div>
+        </div>
+
+        <h2 *ngIf="auth.userRoles.banned">Zostales zbanowany i nie masz mozliwosci komentowania.</h2>
+        <div class="vbottom" *ngIf="!auth.userRoles.banned">
+
+          <form class="fform" [formGroup]="review">
+
+            <div class="canvas">
+              <textarea rows="10" cols="50" formControlName="mainReview" class="inside-canvas">Enter your comment here</textarea>
+            </div>
+
+            <div class="sidecontent">
+              <div class="infos">
+                <label for="name">Nazwa uzytkownika:  </label>
+                <input id="name" type="text" formControlName="userName" />
+              </div>
+              <div class="infos">
+                <label for="name">Nazwa wycieczki:  </label>
+                <input id="name" type="text" formControlName="tripName" />
+              </div>
+              <div class="infos">
+                <label for="name">Data skorzystania z wycieczki:  </label>
+                <input id="name" type="text" formControlName="tripDate" />
+              </div>
+            </div>
+
+
+        </form>
+
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,37 @@
+<div class="client-ui">
+    <app-trip-filter [tripList]="trips" 
+    (msgCountry)="countryEventHandler($event)" (msgDate)="dateEventHandler($event)" (msgPrice)="priceEventHandler($event)">
+    </app-trip-filter>
+</div>
+
+<div class="trips">
+
+    <p class="sum-text" *ngIf="auth.isLoggedIn() == true" [ngStyle]="{'background-color': calculateSum(trips) > 10 ? '#f08080' : '#8db600'}">
+        Ilość aktualnie zarezerowanych wycieczek: {{ calculateSum(trips) }} <br>
+        Łączny koszt wycieczek: {{ calculateMoneySum(trips) }} $
+    </p>
+
+    <div class="trip" *ngFor="let trip of trips | myfilter:filtertags" [ngStyle]="{
+        'background-color': trip.price == calculateExpensive(trips) ? '#f08080' : 
+        trip.price == calculateCheapest(trips) ? '#8db600' : 'sandybrown' }">
+        <a class="linked" routerLink="/trip-list/{{trip.id}}">
+            <h2> {{ trip.name | uppercase }} </h2>
+            <img src="{{ trip.imageLink }}" alt="{{ trip.name }}"/>
+            <p class="countried"> {{ trip.country | uppercase }} </p>
+            <p> {{ "Od " + trip.startDate + " do " + trip.endDate }} </p>
+            <p class="long-p"> {{ trip.desc }} </p>
+        </a>
+        <div class="bottom-section">
+            <p class="priced"> {{ trip.price + " €"}} </p>
+            <p *ngIf="trip.amount < trip.maxAmount - 3" class="amounted"> {{ trip.maxAmount - trip.amount }} </p>
+            <p *ngIf="(trip.amount >= trip.maxAmount - 3)&&(trip.amount != trip.maxAmount)" class="amounted" style="background-color: orange">
+                 {{ trip.maxAmount - trip.amount }} 
+            </p>
+            <p *ngIf="trip.amount == trip.maxAmount"> Brak dostępnych <br> miejsc. </p>
+            <button *ngIf="(trip.amount < trip.maxAmount) && auth.isLoggedIn()" (click)="addTrip(trip)" > + </button>
+            <button style = "background-color: rgb(241, 48, 48); padding: 8px 18px" *ngIf="(trip.amount > 0) && auth.isLoggedIn()" (click)="removeTrip(trip)"> - </button>
+        </div>
+
+    </div>
+    
+</div>

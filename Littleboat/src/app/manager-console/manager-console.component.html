@@ -1,0 +1,54 @@
+<div class="centered">
+    <div class="trip" *ngFor="let trip of trips" >
+        <div class="container">
+            <h2 style="color: black; text-align: center;"> Modyfikacja danych wycieczki: <br> {{ trip.name }}</h2>
+            <form [formGroup]="modForm" class="sform">
+
+                <div class="item">
+                <label for="name">Nazwa wycieczki:  </label>
+                <input id="name" type="text" formControlName="tripName" />
+                </div>
+            
+                <div class="item">
+                <label for="country">Kraj:  </label>
+                <input id="country" type="text" formControlName="tripCountry" />
+                </div>
+            
+                <div class="item">
+                <label for="stardDate">Poczatek wycieczki:  </label>
+                <input id="stardDate" type="text" formControlName="tripStartDate" />
+                </div>
+            
+                <div class="item">
+                <label for="endDate">Koniec wycieczki:  </label>
+                <input id="endDate" type="text" formControlName="tripEndDate" />
+                </div>
+            
+                <div class="item">
+                <label for="price">Cena:  </label>
+                <input id="price" type="text" formControlName="tripPrice" />
+                </div>
+            
+                <div class="item">
+                <label for="maxAmount">Maksymalna ilosc miejsc:  </label>
+                <input id="maxAmount" type="text" formControlName="tripMax" />
+                </div>
+            
+                <div class="item">
+                <label for="desc">Krotki opis:  </label>
+                <input id="desc" type="text" formControlName="tripDesc" />
+                </div>
+            
+                <div class="item">
+                <label for="image">Link do zdjecia:  </label>
+                <input id="image" type="text" formControlName="tripImage" />
+                </div>
+            
+                <button type="submit" (click)="updateData(trip)" class="submit">Submit</button>
+            </form>
+            <div class="bin" (click)="deleteTrip(trip)"> 🗑 </div>
+        </div>
+    </div>
+</div>
+
+<app-trip-form class="centered" style="margin-bottom: 50px"></app-trip-form>

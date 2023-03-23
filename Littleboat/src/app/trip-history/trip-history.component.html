@@ -1,0 +1,26 @@
+<div class="centered">
+
+    <div class="container">
+        <button class="typed" (click)="chooseOption('Archiwalna')">Archiwalne Wycieczki</button>
+        <button class="typed" (click)="chooseOption('Oczekiwania na rozpoczęcie')">Oczekujace na rozpoczęcie</button>
+        <button class="typed" (click)="chooseOption('Aktywna')">Aktywne Wycieczki</button>
+        <button class="typed" (click)="chooseOption('')">Wszystkie Wycieczki</button>
+    </div>
+
+    <div class="container">
+        <div class="suma"> <p> Lista zakupionych wycieczek: </p> </div>
+        <div *ngFor="let trip of trips">
+            <div *ngIf="calculateStatus(trip) == filterOption(calculateStatus(trip))" class="lined">
+                <p> 
+                    <b>{{ trip.name }}</b> :  {{ trip.bought }} 
+                    <br> <b> Od </b> {{ trip.startDate }} <b> do </b> {{ trip.endDate }} 
+                    <br> <b>Suma:</b> {{ (trip.bought * trip.price) | number: '1.2-2' }} $ 
+                    <br> <b> Kraj: </b> {{ trip.country }}
+                    <br> <b> Status: </b> {{ calculateStatus(trip) }}
+                </p>
+                <div *ngIf="soon(trip) == true" style="font-size: 35px" class="hovertext">🔔</div>
+            </div>
+        </div>
+    </div>
+
+</div>

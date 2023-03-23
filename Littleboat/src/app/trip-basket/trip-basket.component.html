@@ -1,0 +1,13 @@
+<div class="centered">
+
+    <div class="container">
+        <div class="suma"> <p> Łączna wartość w koszyku: </p> <p> {{sum}} $ </p></div>
+        <div *ngFor="let trip of trips">
+            <div class="lined">
+                <p> <b>{{ trip.name }}</b> :  {{ trip.amount }} <br> <b>Suma:</b> {{ (trip.amount * trip.price) | number: '1.2-2' }} $ </p>
+                <button class="buy-button" (click)="buyTrip(trip)">KUP</button>
+            </div>
+        </div>
+    </div>
+
+</div>

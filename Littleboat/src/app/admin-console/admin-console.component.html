@@ -1,0 +1,39 @@
+<h1 class="centered"> Zarzadzanie uzytkownikami. </h1>
+<div class="centered">
+
+    <div class="item" *ngFor="let user of users">
+        <h2 style="text-align:center"> Uzytkownik: <br> {{ user.email }} </h2>
+        <h4 style="text-align:center"> UID: <br> {{ user.uid }} </h4>
+        <div class="perm-section">
+            <p class="perms" [ngStyle]="{'background-color': user.roles.admin ? 'lightgreen' : 'crimson'}" > Admin </p>
+            <button (click)="adminUser(user.uid, !user.roles.admin)">
+                <p *ngIf="user.roles.admin">Remove Admin</p>
+                <p *ngIf="!user.roles.admin">Give Admin</p>
+            </button>
+        </div>
+        <div class="perm-section">
+            <p class="perms" [ngStyle]="{'background-color': user.roles.manager ? 'lightgreen' : 'crimson'}" > Manager </p>
+            <button (click)="managerUser(user.uid, !user.roles.manager)">
+                <p *ngIf="user.roles.manager">Remove Manager</p>
+                <p *ngIf="!user.roles.manager">Give Manager</p>
+            </button>
+        </div>
+        <div class="perm-section">
+            <p class="perms" [ngStyle]="{'background-color': user.roles.client ? 'lightgreen' : 'crimson'}" > Client </p>
+            <button (click)="clientUser(user.uid, !user.roles.client)">
+                <p *ngIf="user.roles.client">Remove Client</p>
+                <p *ngIf="!user.roles.client">Give Client</p>
+            </button>
+        </div>
+        <div class="perm-section">
+            <p class="perms" [ngStyle]="{'background-color': user.roles.banned ? 'lightgreen' : 'crimson'}" > Banned </p>
+            <button (click)="banUser(user.uid, !user.roles.banned)">
+                <p *ngIf="user.roles.banned">Pardon</p>
+                <p *ngIf="!user.roles.banned">Ban</p>
+            </button>
+        </div>
+
+    </div>
+
+
+</div>

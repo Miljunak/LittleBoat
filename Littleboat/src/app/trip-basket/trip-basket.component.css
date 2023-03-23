@@ -1,0 +1,98 @@
+.centered, .container {
+    background-color: #F8DE7E;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    margin-top: 100px;
+    background-color: lightskyblue;
+    padding: 25px;
+    border-radius: 5px;
+    width: 400px;
+}
+
+p {
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    font-size: 20px;
+    background-color: aliceblue;
+}
+
+.suma {
+    border-radius: 5px;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: Arial, sans-serif;
+    background-color: aliceblue;
+    align-items: center;
+    justify-content: center;
+}
+
+.suma p {
+    font-weight: 700;
+    margin: 0;
+    font-size: 24px;
+    padding: 5px;
+}
+
+.lined { 
+    display: flex; 
+    position: relative;
+}
+
+.hovertext {
+    cursor: pointer;
+    position: relative;
+}
+  
+.hovertext:before {
+    content: "Zostalo mniej niz 2 tygodnie do wycieczki!";
+    visibility: hidden;
+    opacity: 0;
+    width: 250px;
+    background-color: darkcyan;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 0;
+    transition: opacity 1s ease-in-out;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 50%;
+}
+  
+.hovertext:hover:before {
+    opacity: 1;
+    visibility: visible;
+}
+
+.buy-button {
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: -100px;
+    bottom: 25px;
+    background-color: rgb(255, 180, 17);
+    padding: 15px;
+    border-radius: 15px;
+    font-size: 25px;
+    color: whitesmoke;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 450px) {
+    .container {
+        max-width: 250px;
+    }
+    .buy-button {
+        font-size: 17px;
+        right: -78px;
+    }
+}

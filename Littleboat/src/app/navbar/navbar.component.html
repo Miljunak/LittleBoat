@@ -1,0 +1,36 @@
+<div class="navbar-container">
+
+    <div class="img-container">
+        <img class ="sized" src="../assets/img/boat2.png">
+    </div>
+
+    <div class="links-container">
+        <a class="real" routerLink="/"> Home </a>
+        <a class="real" routerLink="/admin" *ngIf="auth.userRoles.admin==true"> Admin </a>
+        <a class="real" routerLink="/manager" *ngIf="auth.userRoles.manager==true"> Manager </a>
+        <a class="real" routerLink="/trip-list"> Oferta </a>
+        <a class="real" routerLink="/cart" *ngIf="auth.isLoggedIn()"> Cart </a>
+        <a class="real" routerLink="/history" *ngIf="auth.isLoggedIn()"> Trip History </a>
+        <a class="real" routerLink="/login" *ngIf="auth.userData == null"> Log-in </a>
+        <a class="real" routerLink="/signup" *ngIf="auth.userData == null"> Sign-up </a>
+        <a class="real" (click)="auth.signOut()" *ngIf="auth.isLoggedIn()"> Log-out </a>
+    </div>
+
+    <div class="logged-in" *ngIf="auth.isLoggedIn()"> Zalogowano jako: <br> {{auth.userEmail}} </div>
+
+    <button><div class="burger"></div></button>
+    <nav>
+        <ul>
+            <li><a routerLink="/"> Home </a></li>
+            <li *ngIf="auth.userRoles.admin"><a routerLink="/admin"> Admin </a></li>
+            <li *ngIf="auth.userRoles.manager"><a routerLink="/manager"> Manager </a></li>
+            <li><a routerLink="/trip-list"> Oferta </a></li>
+            <li *ngIf="auth.isLoggedIn()"><a routerLink="/cart"> Cart </a></li>
+            <li *ngIf="auth.isLoggedIn()"><a routerLink="/history"> Trip History </a></li>
+            <li *ngIf="!auth.isLoggedIn()"><a routerLink="/login"> Log-in </a></li>
+            <li *ngIf="!auth.isLoggedIn()"><a routerLink="/signup"> Sign-up </a></li>
+            <li *ngIf="auth.isLoggedIn()"><a (click)="auth.signOut()" routerLink="/"> Log-out </a></li>
+        </ul>
+    </nav>
+
+</div>

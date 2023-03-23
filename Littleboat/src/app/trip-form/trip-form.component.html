@@ -1,0 +1,53 @@
+<div class="centered">
+
+  <div class="container">
+    <h1>Dodaj wycieczke: </h1>
+    <form [formGroup]="tripForm">
+
+        <div class="item">
+          <label for="name">Nazwa wycieczki:  </label>
+          <input id="name" type="text" formControlName="tripName" />
+        </div>
+      
+        <div class="item">
+          <label for="country">Kraj:  </label>
+          <input id="country" type="text" formControlName="tripCountry" />
+        </div>
+      
+        <div class="item">
+          <label for="stardDate">Poczatek wycieczki:  </label>
+          <input id="stardDate" type="text" formControlName="tripStartDate" />
+        </div>
+      
+        <div class="item">
+          <label for="endDate">Koniec wycieczki:  </label>
+          <input id="endDate" type="text" formControlName="tripEndDate" />
+        </div>
+      
+        <div class="item">
+          <label for="price">Cena:  </label>
+          <input id="price" type="text" formControlName="tripPrice" />
+        </div>
+      
+        <div class="item">
+          <label for="maxAmount">Maksymalna ilosc miejsc:  </label>
+          <input id="maxAmount" type="text" formControlName="tripMax" />
+        </div>
+      
+        <div class="item">
+          <label for="desc">Krotki opis:  </label>
+          <input id="desc" type="text" formControlName="tripDesc" />
+        </div>
+      
+        <div class="item">
+          <label for="image">Link do zdjecia:  </label>
+          <input id="image" type="text" formControlName="tripImage" />
+        </div>
+      
+        <button type="submit" (click)="updateData()">Submit</button>
+        <p *ngIf="incorrectForm == true" style="font-size: 20px;">
+          Upewnij sie, ze wszystkie inputy maja 3 znaki oraz ze data jest w formacie YYYY-MM-DD.
+        </p>
+    </form>
+  </div>
+</div>

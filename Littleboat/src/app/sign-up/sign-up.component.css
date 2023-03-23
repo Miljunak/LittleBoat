@@ -1,0 +1,38 @@
+.centered, .container {
+    background-color: #F8DE7E;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    font-family: Arial, sans-serif;
+    margin-top: 100px;
+    background-color: lightskyblue;
+    padding: 25px;
+    border-radius: 5px;
+    width: 400px;
+}
+
+.item {
+    height: 40px;
+    font-size: 19px;
+}
+
+button {
+    cursor: pointer;
+    font-size: 20px;
+    color: whitesmoke;
+    padding: 10px 20px;
+    background-color: crimson;
+    border: none;
+    border-radius: 25px;
+    font-weight: 700;
+    transition: all 0.3s linear;
+}
+
+button:hover {
+    color: rgb(143, 146, 150);
+    padding: 10px 23px;
+}

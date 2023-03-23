@@ -1,0 +1,58 @@
+<div class="centered">
+
+    <div class="container">
+    
+        <div class="intervals">
+
+            <p>Wybierz kraj: </p>
+
+            <select [(ngModel)] = "chosenCountry" (change)="countryChanged()">
+                <option value=""></option>
+                <option *ngFor="let trip of tripList"> {{ trip["country"] }} </option>
+            </select>
+
+        </div>
+
+        <div class="intervals">
+
+            <p> Cena od</p>
+
+            <select [(ngModel)] = "chosenPriceLower" (change)="pricesChanged()">
+                <option value=""></option>
+                <option *ngFor="let trip of tripList"> {{ trip["price"] }} </option>
+            </select>
+
+            <p>do</p>
+        
+            <select [(ngModel)] = "chosenPriceHigher" (change)="pricesChanged()">
+                <option value=""></option>
+                <option *ngFor="let trip of tripList"> {{ trip["price"] }} </option>
+            </select>
+
+            <p *ngIf="priceTester()">Przedział jest nieprawidłowy.</p>
+
+        </div>
+
+        <div class="intervals">
+
+            <p> Wycieczka od</p>
+
+            <select [(ngModel)] = "chosenStartDate" (change)="datesChanged()">
+                <option value=""></option>
+                <option *ngFor="let trip of tripList"> {{ trip["startDate"] }} </option>
+            </select>
+
+            <p>do</p>
+        
+            <select [(ngModel)] = "chosenEndDate" (change)="datesChanged()">
+                <option value=""></option>
+                <option *ngFor="let trip of tripList"> {{ trip["endDate"] }} </option>
+            </select>
+
+            <p *ngIf="dateTester()">Przedział jest nieprawidłowy.</p>
+
+        </div>
+
+    </div>
+
+</div>

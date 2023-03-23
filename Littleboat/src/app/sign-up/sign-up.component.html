@@ -1,0 +1,17 @@
+<div class="centered">
+    <div class="container">
+        <h2>Register an account</h2>
+        <form [formGroup]="registerForm">
+            <div class="item">
+                <label for="name">Email </label>
+                <input id="name" type="text" formControlName="email" />
+            </div>
+        
+            <div class="item">
+                <label for="type">Password </label>
+                <input id="password" type="password" formControlName="password" />
+            </div>
+            </form>
+        <button type="submit" (click)="submitForm()">Confirm</button>
+    </div>
+</div>

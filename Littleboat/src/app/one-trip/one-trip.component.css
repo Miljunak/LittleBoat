@@ -1,0 +1,321 @@
+.centered {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    position: relative;
+    font-family: Arial, sans-serif;
+    min-height: 1200px;
+    background-color: sandybrown;
+    margin: 10px;
+    margin-bottom: 100px;
+    padding: 10px;
+    width: 1000px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    padding:0;
+}
+
+.middle {
+    height: 500px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    border-bottom: 6px solid salmon;
+    border-top: 6px solid salmon;
+    overflow: hidden;
+}
+
+.left {
+    background-color: orange;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.right {
+    height: 500px;
+    min-width: 500px;
+    border-left: 6px solid salmon;
+}
+
+.right img {
+    width: 100%;
+    height: 100%;
+}
+
+.bottom {
+    position: relative;
+    margin:0;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+h1 {
+    margin: 25px 35px;
+    font-size: 70px;
+    background-color: azure;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+h2 {
+    padding: 25px 0;
+    width: 100%;
+    text-align: center;
+    font-size: 50px;
+    display: inline-block;
+    color: brown;
+}
+
+.opis {
+    background-color: aliceblue;
+    min-width: 175px;
+    height: 300px;
+    margin: 0px 15px 70px 15px;
+    font-size: 30px;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.cena {
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 50px;
+    font-weight: 700;
+    background-color: rgb(184, 191, 211);
+    color: gold;
+}
+
+.back {
+    text-decoration: none;
+    color: aliceblue;
+    font-weight: 600;
+    font-size: 40px;
+    border-radius: 25px;
+    padding: 10px;
+    background-color: lightseagreen;
+    border: 3px solid rgb(31, 80, 82);
+    position: absolute;
+    top: -40px;
+    left: -30px;
+}
+
+.likes-section {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 125px;
+    height: 100px;
+    background-color: skyblue;
+    border: 2px solid darkcyan;
+    padding: 5px;
+    border-radius: 25px;
+}
+
+.addrem {
+    width: 150px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.addrem button {
+    cursor: pointer;
+    font-size: 25px;
+    padding: 8px 15px;
+    background-color: lightgreen;
+    border-radius: 100px;
+    border: 2px solid gray;
+    margin: 0 25px 0 5px;
+}
+
+.ilosc {
+    background-color: burlywood;
+    margin: 7px 0;
+    border-radius: 100px;
+    padding: 10px 15px;
+    font-size: 20px;
+}
+
+.container {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 100px;
+    background-color: lightskyblue;
+    padding: 25px;
+    border-radius: 5px;
+    width: 600px;
+    margin-bottom: 125px;
+}
+
+.sform {
+    width: 300px;
+}
+
+.fform, .vbottom {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.daty {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 125px;
+    height: 100px;
+    background-color: skyblue;
+    border: 2px solid darkcyan;
+    padding: 5px;
+    border-radius: 25px;
+    font-size: 20px;
+}
+
+.submit {
+    cursor: pointer;
+    color: whitesmoke;
+    font-weight: 700;
+    padding: 5px;
+    border:none;
+    background-color: crimson;
+    border-radius: 10px;
+    margin-top: 20px;
+    width: 90%;
+}
+
+.bin {
+    font-size: 60px;
+    font-weight: 600;
+    background-color: burlywood;
+    padding: 3px 11px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.4s linear;
+}
+
+.bin:hover {
+    color: rgb(20, 20, 20);
+    background-color: rgb(255, 48, 48);
+    padding: 4px 12px;
+}
+
+.vbottom {
+    height: 250px;
+    background-color: orange;
+    width: 90%;
+    border-radius: 5px;
+}
+
+.canvas {
+    margin:0;
+    width: 500px;
+    height: 200px;
+    background-color: white;
+    color: #0e1111;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.sidecontent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 300px;
+    padding-left: 50px;
+    height: 200px;
+}
+
+.inside-canvas {
+    width: 98%;
+    height: 98%;
+    border: none;
+}
+
+textarea {
+    -moz-resize: none;  /* Firefox */
+    -webkit-resize: none; /* Safari and Chrome */
+    resize: none;
+}
+
+@media screen and (max-width: 1150px) {
+    .card {
+        width: 750px;
+    }
+    .canvas {
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .card {
+        width: 500px;
+    }
+    .canvas {
+        width: 120px;
+    }
+    .middle {
+        height: auto;
+        flex-direction: column;
+    }
+    .right {
+        border: none;
+    }
+    .cena {
+        font-size: 20px;
+    }
+    .likes-section {
+        width: 75px;
+    }
+    .daty {
+        max-width: 75px;
+        padding: 0;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .card {
+        width: 320px;
+        min-height: 2600px;
+    }
+    .bottom {
+        flex-wrap: wrap;
+    }
+    .canvas {
+        width: 260px;
+    }
+    .cena {
+        font-size: 20px;
+    }
+    .likes-section {
+        width: 50px;
+    }
+    .daty {
+        max-width: 50px;
+        padding: 0;
+        font-size: 15px;
+    }
+    .vbottom {
+        height: 500px;
+    }
+    .fform {
+        flex-direction: column;
+    }
+}

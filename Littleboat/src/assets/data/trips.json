@@ -1,0 +1,124 @@
+{
+    "Trips": [
+        {
+            "Name": "Viva Iberia",
+            "Country": "Hiszpania",
+            "StartDate": "2022-6-2",
+            "EndDate": "2022-6-4",
+            "Price": 2999.99,
+            "MaxAmount": 8,
+            "ShortDesc": "Wycieczka do Hiszpani! Jedna z najlepszych!",
+            "ImageLink": "assets/img/spain.jpeg",
+            "Likes": 14,
+            "Dislikes": 10
+        },
+        {
+            "Name": "Klasyczne Włochy",
+            "Country": "Włochy",
+            "StartDate": "2022-6-5",
+            "EndDate": "2022-6-10",
+            "Price": 4999.99,
+            "MaxAmount": 10,
+            "ShortDesc": "Włoskie jedzenie jest najlepsze!",
+            "ImageLink": "assets/img/italy.jpg",
+            "Likes": 24,
+            "Dislikes": 10
+        },
+        {
+            "Name": "Herbaciane Tygrysy",
+            "Country": "Sri Lanka",
+            "StartDate": "2022-6-11",
+            "EndDate": "2022-6-15",
+            "Price": 1999.99,
+            "MaxAmount": 20,
+            "ShortDesc": "Fantastyczna wycieczka pozwalająca podziwiać uroki Sri Lanki!",
+            "ImageLink": "assets/img/srilanka.jpg",
+            "Likes": 7,
+            "Dislikes": 1
+        },
+        {
+            "Name": "Kolory Indii",
+            "Country": "Indie",
+            "StartDate": "2022-6-17",
+            "EndDate": "2022-6-20",
+            "Price": 3499.99,
+            "MaxAmount": 42,
+            "ShortDesc": "Poznaj niesamowitą kulture Indyjską!",
+            "ImageLink": "assets/img/hindu.jpg",
+            "Likes": 40,
+            "Dislikes": 37
+        },
+        {
+            "Name": "Bogowie i Faraonowie",
+            "Country": "Egipt",
+            "StartDate": "2022-6-21",
+            "EndDate": "2022-6-31",
+            "Price": 7499.99,
+            "MaxAmount": 5,
+            "ShortDesc": "Wycieczka do Egiptu! Daj się oczarować niesamowitymi starożytnymi konstrukcjami!",
+            "ImageLink": "assets/img/egypt.jpg",
+            "Likes": 92,
+            "Dislikes": 63
+        },
+        {
+            "Name": "Rabat dla Berbera",
+            "Country": "Maroko",
+            "StartDate": "2022-7-1",
+            "EndDate": "2022-6-4",
+            "Price": 9999.99,
+            "MaxAmount": 17,
+            "ShortDesc": "Powiedzenie mówi, że Maroko należy obejrzeć chociaż raz w życiu, to jest dobra okazja!",
+            "ImageLink": "assets/img/marocco.jpg",
+            "Likes": 4,
+            "Dislikes": 21
+        },
+        {
+            "Name": "Na zachodnim krańcu Europy",
+            "Country": "Portugalia",
+            "StartDate": "2022-7-5",
+            "EndDate": "2022-7-12",
+            "Price": 6499.99,
+            "MaxAmount": 23,
+            "ShortDesc": "Relaksacja oraz zwiedzanie Portugalii są świetne!",
+            "ImageLink": "assets/img/portugal.jpg",
+            "Likes": 34,
+            "Dislikes": 16
+        },
+        {
+            "Name": "Magiczny Orient",
+            "Country": "Turcja",
+            "StartDate": "2022-7-17",
+            "EndDate": "2022-7-20",
+            "Price": 2999.99,
+            "MaxAmount": 72,
+            "ShortDesc": "Turcja jest super!",
+            "ImageLink": "assets/img/turk.jpeg",
+            "Likes": 42,
+            "Dislikes": 22
+        },
+        {
+            "Name": "Ryż na polu, raj na plaży",
+            "Country": "Wietnam",
+            "StartDate": "2022-7-22",
+            "EndDate": "2022-7-27",
+            "Price": 1499.99,
+            "MaxAmount": 16,
+            "ShortDesc": "Pojedź do Wietnamu relaksować się w egzotycznym świecie!",
+            "ImageLink": "assets/img/wiet.jpg",
+            "Likes": 54,
+            "Dislikes": 3
+        },
+        {
+            "Name": "Shalom Izrael!",
+            "Country": "Izrael",
+            "StartDate": "2022-7-23",
+            "EndDate": "2022-7-24",
+            "Price": 3499.99,
+            "MaxAmount": 51,
+            "ShortDesc": "Wycieczka do Izraela! Niesamowite doświadczenie!",
+            "ImageLink": "assets/img/israel.jpg",
+            "Likes": 33,
+            "Dislikes": 11
+        }
+    ]
+}

@@ -1,0 +1,146 @@
+body {
+    padding:0;
+    margin:0;
+}
+
+.trips {
+    background-color: #F8DE7E;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.trip {
+    font-family: Arial, sans-serif;
+    min-height: 575px;
+    background-color: sandybrown;
+    margin: 10px;
+    margin-bottom: 100px;
+    padding: 10px;
+    width: 350px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.trip img {
+    border: 1px solid salmon;
+    border-radius: 150px;
+    width: 300px; 
+    height: 300px;
+}
+
+h2 {
+    display: inline-block;
+    font-size: 23px;
+    font-weight: 800;
+    background-color: aliceblue;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.countried {
+    color: whitesmoke;
+    margin-bottom: 0;
+    font-size: 25px;
+    font-weight: 600;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.priced { font-size: 25px; }
+
+.bottom-section {
+    user-select: none;
+    border-top: 3px solid rgb(255, 180, 17);
+    position: absolute;
+    bottom: -70px;
+    background-color: antiquewhite;
+    width: 100%;
+    border-radius: 0 0 5px 5px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.amounted {
+    background-color: burlywood;
+    border-radius: 100px;
+    padding: 10px 15px;
+    font-size: 20px;
+}
+
+.bottom-section button {
+    cursor: pointer;
+    font-size: 25px;
+    padding: 8px 15px;
+    background-color: lightgreen;
+    border-radius: 100px;
+    border: 2px solid gray;
+}
+
+.sum-text {
+    font-size: 30px;
+    color: whitesmoke;
+    font-weight: 700;
+    text-align: center;
+    width: 80%;
+    padding: 15px;
+    border-radius: 25px;
+}
+
+.bin {
+    font-size: 30px;
+    font-weight: 600;
+    background-color: burlywood;
+    padding: 3px 11px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.4s linear;
+}
+
+.bin:hover {
+    color: rgb(20, 20, 20);
+    background-color: rgb(255, 48, 48);
+    padding: 4px 12px;
+}
+
+.long-p { font-size: 12px; margin: 0 40px;}
+
+.likes-section {
+    position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 75px;
+    top: 120px;
+    left: 275px;
+    background-color: skyblue;
+    border: 2px solid darkcyan;
+    padding: 5px;
+    border-radius: 25px;
+}
+
+.client-ui {
+    background-color: #F8DE7E;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.linked {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
